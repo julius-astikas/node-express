@@ -1,51 +1,19 @@
 import express from "express";
+import { getAllUsers } from "../controllers/getAllUsers.js";
+import { createUser } from "../controllers/createUser.js";
+import { getUserByEmail } from "../controllers/getUserByEmail.js";
+import { deleteUser } from "../controllers/deleteUser.js";
 
 const router = express.Router();
 
-const users = [
-  {
-    email: "aj@gmail.com",
-    username: "Ana",
-  },
-  {
-    email: "eg@gmail.com",
-    username: "Emma",
-  },
-];
+// GET: localhost:8000/users
+router.get("/", getAllUsers);
+// POST: localhost:8000/users
+router.post("/", createUser);
+// GET: localhost:8000/users/:email
+router.get("/:email", getUserByEmail);
 
-// GET - localhost:8000/users
-router.get("/", (req, res) => {
-  res.status(200).json({
-    data: users,
-  });
-});
-
-// POST - localhost:8000/users
-router.post("/", (req, res) => {
-  const { email, username } = req.body;
-
-  const user = {
-    email,
-    username,
-  };
-
-  users.push(user);
-
-  res.status(201).json({
-    message: "Created new user",
-    data: user,
-  });
-});
-
-// GET user by email - localhost:8000/users/:email
-router.get("/:email", (req, res) => {
-  const email = req.params.email;
-
-  const user = users.find((user) => user.email === email);
-
-  res.status(200).json({
-    data: user,
-  });
-});
+// DELETE: localhost:8000/users/:email
+router.delete("/:email", deleteUser);
 
 export default router;

@@ -13,18 +13,7 @@ export const validate = (schema) => {
       });
     }
 
-    if (result.data.body) {
-      req.body = result.data.body;
-    }
-
-    if (result.data.params) {
-      req.params = result.data.params;
-    }
-
-    if (result.data.query) {
-      req.query = result.data.query;
-    }
-
+    // Continue to the route handler when validation succeeds
     next();
   };
 };

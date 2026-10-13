@@ -6,7 +6,7 @@ import { deleteUser } from "../controllers/deleteUser.js";
 import { validate } from "../middleware/validate.js";
 import { createUserSchema } from "../schemas/user.create.schema.js";
 import { deleteUserSchema } from "../schemas/user.delete.schema.js";
-import { getUserByEmailSchema } from "../schemas/user.get.schema.js";
+import { getUserByEmailSchema } from "../schemas/get.user.by_email.schema.js";
 
 const router = express.Router();
 

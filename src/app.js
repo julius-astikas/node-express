@@ -1,6 +1,7 @@
 import express from "express";
 
 import userRouter from "./routes/userRouter.js";
+import cardsRouter from "./routes/cardsRouter.js";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 /* Routes */
+app.use("/cards", cardsRouter);
 app.use("/users", userRouter);
 
 const port = 8000;

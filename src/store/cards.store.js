@@ -19,6 +19,6 @@ export const cards = [
       "During your turn, each non-Equipment artifact and non-Aura enchantment you control with mana value 4 or greater is a 4/4 Elemental creature in addition to its other types and has indestructible, haste, and “Whenever this creature deals combat damage to a player, draw a card.”",
     flavorText: undefined,
     power: "3",
-    toughess: "3",
+    toughness: "3",
   },
 ];

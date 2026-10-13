@@ -1,4 +1,4 @@
-import { cards } from "../../store/cards.js";
+import { cards } from "../../store/cards.store.js";
 
 export const getAllCards = (req, res) => {
   res.status(200).json({

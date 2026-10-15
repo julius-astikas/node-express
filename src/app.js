@@ -2,6 +2,7 @@ import express from "express";
 
 import userRouter from "./routes/userRouter.js";
 import cardsRouter from "./routes/cardsRouter.js";
+import personRouter from "./routes/personRouter.js";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 /* Routes */
 app.use("/cards", cardsRouter);
 app.use("/users", userRouter);
+app.use("/persons", personRouter);
 
 const port = 8000;
 app.listen(port, () => {

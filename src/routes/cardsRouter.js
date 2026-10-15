@@ -10,6 +10,6 @@ const router = express.Router();
 
 // GET: localhost:8000/cards
 router.get("/", getAllCards);
-router.post("/", addCard);
+router.post("/", validate(addCardSchema), addCard);
 
 export default router;

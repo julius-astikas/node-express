@@ -11,4 +11,20 @@ describe("DELETE: /products/:productId", () => {
       message: "Product was removed.",
     });
   });
+
+  it("Should fail to delete a nonexistant product with invalid id", async () => {
+    const res = await request(app).delete("/products/mjaujegerenku");
+    expect(res.status).toBe(404);
+    expect(res.body).toEqual({
+      error: "Product not found.",
+    });
+  });
+
+  it("Should fail to delete a nonexistant product with valid id", async () => {
+    const res = await request(app).delete("/products/99999");
+    expect(res.status).toBe(404);
+    expect(res.body).toEqual({
+      error: "Product not found.",
+    });
+  });
 });

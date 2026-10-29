@@ -18,5 +18,9 @@
     "sequelize": "^6.37.8",
     "tedious": "^20.3.8",
     "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1",
+    "vitest": "^5.0.5"
   }
 }

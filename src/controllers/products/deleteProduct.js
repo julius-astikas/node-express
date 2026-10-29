@@ -1,4 +1,4 @@
-import { products } from "../../store/products.store";
+import { products } from "../../store/products.store.js";
 
 export const deleteProduct = (req, res) => {
   const { productId } = req.params;

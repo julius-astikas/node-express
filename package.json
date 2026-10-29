@@ -2,19 +2,21 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "dotenv": "^18.0.8",
+    "dotenv": "^18.0.9",
     "express": "5.2.1",
     "mssql": "^12.7.9",
+    "sequelize": "^6.37.8",
+    "tedious": "^20.3.8",
     "zod": "^4.6.6"
   }
 }
